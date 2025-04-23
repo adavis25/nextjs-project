@@ -1,0 +1,55 @@
+.container{
+    border-radius: 0.75rem;
+    background-color: oklch(92.8% 0.006 264.531);
+}
+
+.header{
+    font-weight: bold;
+    font-size: 1.25rem;
+    padding-top: 1.25rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    margin-bottom: 0.25rem; 
+    color: oklch(37.3% 0.034 259.733);
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-bottom: 0.5rem;
+}
+
+.label{
+    color: oklch(37.3% 0.034 259.733);
+}
+
+.errorMessage {
+    color: oklch(63.7% 0.237 25.331);
+}
+
+.input{
+    color: #374151;
+    border-width: 1px;
+    border-style: solid;
+    border-color: oklch(87.2% 0.01 258.338);
+    border-radius: 0.375rem;
+    padding: 0.5rem;
+}
+
+.button{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.375rem;
+  color: oklch(37.3% 0.034 259.733);
+  border: 1px solid oklch(70.7% 0.022 261.325); 
+}
+
+.formFooter {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1.25rem;
+}
