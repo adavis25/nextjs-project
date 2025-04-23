@@ -1,5 +1,6 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import styles from "./../styles/form.module.css"
+import { FakeApiCall } from "./FakeApiCall";
 
 interface IFormInput{
     name: string
@@ -11,6 +12,7 @@ export default function Form(isActive){
     
     const {register, reset, handleSubmit, formState: {errors}} = useForm<IFormInput>()
     const onSubmit: SubmitHandler<IFormInput> = (data) => {
+        FakeApiCall(data)
     }
 
     if(isActive){
