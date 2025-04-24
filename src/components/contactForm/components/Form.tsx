@@ -1,6 +1,7 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import styles from "./../styles/form.module.css"
 import { FakeApiCall } from "./FakeApiCall";
+import test from "node:test";
 
 interface IFormInput{
     name: string
@@ -8,12 +9,13 @@ interface IFormInput{
     message: string
 }
 
-export default function Form(isActive){
+export default function Form({isActive, incIndex}){
     
     const {register, reset, handleSubmit, formState: {errors}} = useForm<IFormInput>()
     const onSubmit: SubmitHandler<IFormInput> = (data) => {
         FakeApiCall(data);
         reset();
+        incIndex()
     }
 
     if(isActive){
@@ -36,7 +38,7 @@ export default function Form(isActive){
                 )}
                 <div className={styles.formFooter}>
                     <button className={styles.button} type="submit">Save</button>
-                    <button className={styles.button} type="reset">Reset</button>
+                    <button className={styles.button}  type="reset">Reset</button>
                 </div>
             </form>
         )

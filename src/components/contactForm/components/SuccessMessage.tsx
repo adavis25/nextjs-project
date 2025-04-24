@@ -1,6 +1,6 @@
 import styles from "./../styles/form.module.css"
 
-export default function SuccessMessage({isActive}:{isActive: boolean}){
+export default function SuccessMessage({isActive, decIndex}){
     if(isActive){
         return (
             <div>
@@ -8,7 +8,7 @@ export default function SuccessMessage({isActive}:{isActive: boolean}){
                     <h1 className="px-5 text-gray-700">Sent</h1>
                 </div>
                 <div className={styles.formFooter}>
-                    <button className={styles.button}>Reset</button>
+                    <button onClick={decIndex} className={styles.button}>Reset</button>
                 </div>
             </div>
         )
