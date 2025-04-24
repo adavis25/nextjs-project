@@ -12,7 +12,8 @@ export default function Form(isActive){
     
     const {register, reset, handleSubmit, formState: {errors}} = useForm<IFormInput>()
     const onSubmit: SubmitHandler<IFormInput> = (data) => {
-        FakeApiCall(data)
+        FakeApiCall(data);
+        reset();
     }
 
     if(isActive){

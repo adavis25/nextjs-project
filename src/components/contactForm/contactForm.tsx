@@ -12,8 +12,8 @@ export default function ContactForm(){
     return (
         <div className={styles.container}>
             <h1 className={styles.header}>Contact Me</h1>
-            <Form isActive={activeIndex===0} onSubmitForm={() => setActiveIndex(1)}/>
-            <SuccessMessage isActive={activeIndex===1}/>
+            <Form isActive={ activeIndex === 0}/>
+            <SuccessMessage isActive={ activeIndex === 1}/>
         </div>
     );
 }
